@@ -1,0 +1,84 @@
+        .hamburger {
+            position: relative;
+            width: 70px;
+            height: 70px;
+/*            background-color: #333;*/
+            cursor: pointer;
+        }
+        .hamburger span {
+            position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: #fff3af;
+/*
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+*/            
+            top: calc(50% - 2.5px);
+            left: calc(50% - 15px);
+            transition: all .3s;
+        }
+        .hamburger span::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: #fff3af;
+            top: -10px;
+            transition: top .3s .3s,transform .3s;
+        }
+        .hamburger span::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: #fff3af;
+            bottom: -10px;
+            transition: bottom .3s .3s,transform .3s;
+        }
+        .hamburger-x span {
+             position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: transparent;
+/*
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+*/            
+            top: calc(50% - 2.5px);
+            left: calc(50% - 15px);
+            transform: rotate(90deg);
+        }
+        .hamburger-x span::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: #fff3af;
+            top: 0;
+            transform: rotate(45deg); 
+            transition: top .3s,transform .3s .3s;
+        }
+        .hamburger-x span::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width:30px;
+            height: 5px;
+            background-color: #fff3af;
+            bottom: 0;
+            transform: rotate(-45deg); 
+            transition: bottom .3s,transform .3s .3s;
+        }

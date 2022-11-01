@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+    <script>
+    $(function(){
+        $(".hamburger").click(function(){
+            $(this).toggleClass("hamburger-x");
+            $(this).next().fadeToggle();
+        });
+        
+        $(window).resize(function(){
+            var w =
+                $(window).width()/16;//轉成em
+            console.log(w);
+            if(w>40){
+                $(".hamburger").next().show();}
+            else{
+                $(".hamburger").next().hide();
+                $(".hamburger").removeClass("hamburger-x");
+            }
+            
+         });
+        })
+    
+    </script>
+    <style>
+       
+        @media screen and (min-width:40em) {
+            .hamburger {
+                display: none;
+               
+            }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            float: right;
+            
+        }
+        
+        nav li{
+            float: left;
+            list-style-type: none;
+            width: 120px;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: #777;
+            font-family: helevatica ;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+        } }        
+        @media screen and (max-width:40em) {
+            
+            ul {
+                display: none;
+            }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            clear: both;
+        
+        }
+        
+        nav li{
+            float: left;
+            list-style-type: none;
+            width: 100%;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: #777;
+            font-family: helevatica ;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+        } }
+        
+        .hamburger {
+            width: 50px;
+            height: 50px;
+            background-color: #777;
+            position: relative;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .hamburger span {
+        
+            height:5px;
+            width:  40px;
+            background-color: #fff3af;
+            position: absolute;
+            display: block;
+            /*            絕對定位的置中法*/
+            margin: auto;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+/*            top: calc(50% - 2.5px);*/
+/*            left: calc(50% - 15px);*/
+            transition: all .3s;
+        }
+        
+        
+        
+        .hamburger span::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width:40px;
+            height: 5px;
+            background-color: #fff3af;
+            top: -10px;
+            transition: top .3s .3s , transform .3s;
+/*                第一組數字是*/
+            
+        }
+        
+        .hamburger span::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width:40px;
+            height: 5px;
+            background-color: #fff3af;
+            bottom: -10px;
+            transition: bottom .3s .3s ,transform  .3s;
+        }
+    
+        .hamburger-x span {
+        
+            height:5px;
+            width:  40px;
+            background-color: transparent;
+            position: absolute;
+            display: block;
+            /*            絕對定位的置中法*/
+            margin: auto;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            transform: rotate(90deg);
+        }
+        .hamburger-x span::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width:40px;
+            height: 5px;
+            background-color: #fff3af;
+            top: 0;
+            transform: rotate(45deg);
+            transition: bottom .3s  ,transform .3s .3s;
+        }
+        .hamburger-x span::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width:40px;
+            height: 5px;
+            background-color: #fff3af;
+            bottom: 0;
+            transform: rotate(-45deg);
+            transition: bottom .3s  ,transform .3s .3s;
+        }
+    
+    </style>
+</head>
+<body>
+   <nav>
+    <div class="hamburger"><span></span></div>
+    <ul>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+        <li><a href="javascript:;">Menu</a></li>
+    </ul>
+    </nav>
+</body>
+</html>

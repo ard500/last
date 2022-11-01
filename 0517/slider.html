@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    $(function(){
+        var currentPosition = 0;
+        var photoWidth = 600;
+        var timeout = 1500;
+        var speed = 600;
+        var photo = $(".photo");
+        var number0fPhotos = photo.length;
+        console.log(photo);
+        $("#wrapper").css("width",photoWidth * number0fPhotos);
+        
+        function move(){
+            $("#wrapper").animate({
+                "marginLeft": -(photoWidth * currentPosition);
+            },speed);
+        }
+        function cycle(){
+            if(currentPosition == number0fPhotos -1)
+                currentPosition = 0;
+        }else{
+            currentPosition ++ ;//遞增1的意思 
+        }move();
+        
+    })
+    </script>
+<style>
+    #slider{
+/*        width: 400px;*/
+        height: 200px;
+    }
+    #slider .photo {
+        width: 400px;
+        height: 200px;
+        float: left;
+    }
+    </style>    
+</head>
+<body>
+    <div id="slider">
+        <div id="wrapper">
+            <div class="photo">
+                <img src="http://lorempixel.com/400/200/nightlife" alt="">
+              </div>
+            <div class="photo">
+                <img src="http://lorempixel.com/400/200/animals" alt="">
+            </div>
+            <div class="photo">
+                <img src="http://lorempixel.com/400/200/people" alt="">
+            </div>
+              <div class="photo">
+                <img src="http://lorempixel.com/400/200/technics" alt="">
+            </div>
+              
+        </div>
+    </div>
+</body>
+</html>

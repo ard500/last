@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>test</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+     <link rel="stylesheet" href="mobile.css" media="screen and (max-width:959px)">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+    <script>
+    $(function(){
+        $(".hamburger").click(function(){
+            $(this).toggleClass("hamburger-x");
+            $(this).next().fadeToggle();
+        });
+        
+        $(window).resize(function(){
+            var w =
+                $(window).width();
+            console.log(w);
+            if(w>960){
+                $(".hamburger").next().show();}
+            else{
+                $(".hamburger").next().hide();
+                $(".hamburger").removeClass("hamburger-x");
+            }
+            
+         });
+        })
+    
+    </script>
+</head>
+<style>
+/*    @import url(mobile.css);*/
+    
+    
+ </style>
+
+
+<body>
+   
+<nav class="full clearfix">
+   <div class="fixed">
+      <div id="logo"></div>
+      <div id="nav">
+         <div class="hamburger"><span></span></div>
+          <ul>
+              <li><a href="javascript:;">HOME</a></li>
+               <li><a href="javascript:;">ABOUT</a></li>
+                <li><a href="javascript:;">SERVICES</a></li> 
+                <li><a href="javascript:;">PORTFOLIO</a></li>
+               <li><a href="javascript:;">CONTACT</a></li>
+          </ul>
+      </div>
+       
+       
+   </div>
+    
+    
+    
+</nav>
+    <header class="full">
+        
+        
+        
+    </header>
+    <div class="full clearfix" id="news">
+       <div class="fixed">
+           <div class="news-box"> 
+           <div class="news-box-icon red circle">
+           <span class="fa fa-bicycle fa-3x"></span>
+           </div>
+           <div class="news-box-content">
+               <h2>Lorem Ipsum</h2>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+           </div> 
+           
+       </div>
+        
+        <div class="news-box"> 
+           <div class="news-box-icon red circle">
+           <span class="fa fa-taxi fa-3x"></span>
+           </div>
+           <div class="news-box-content">
+               <h2>Lorem Ipsum</h2>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+           </div> 
+           
+       </div>
+       <div class="news-box"> 
+           <div class="news-box-icon red circle">
+           <span class="fa fa-bus fa-3x"> </span>
+           </div>
+           <div class="news-box-content">
+               <h2>Lorem Ipsum</h2>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+           </div> 
+           
+       </div>
+       
+        </div>
+        
+    </div>
+    <div class="fixed clearfix" id="service">
+        <div class="service-content">
+            <h2>Let's do it.</h2>
+            <div class="slogan">Civamus vestibulum nulla nec ante</div>
+            
+            <div class="service-content-box">
+                <h3>laught</h3>
+                <p>Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high, so high so high so high, so - if you want to sing this way, think of what you'd like to say, add a tune and you will see, just how easy it can be. Treacle pudding, fish and chips, fizzy drinks and liquorice, flowers, rivers, sand and sea, snowflakes and the stars are free. La la la la la, la la la la la la la, la la la la la la la, la la la la la la la la la la la la la, </p>
+                <a href="" class="btn red">more</a>
+            </div>
+            <div class="service-content-box">
+                <h3>live</h3>
+                <p>Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Barnaby the Bear's my name. Birds taught me to sing, when they took me to their king, first I had to fly, in the sky so high so high, so high so high so high, so - if you want to sing this way, think of what you'd like to say, add a tune and you will see, just how easy it can be. Treacle pudding, fish and chips, fizzy drinks and liquorice, flowers, rivers, sand and sea, snowflakes and the stars are free. La la la la la, la la la la la la la, la la la la la la la, la la la la la la la la la la la la la, </p>
+                <a href="" class="btn red">more</a>
+            </div>
+            
+        </div>
+        <div class="service-img"></div>
+        
+    </div>
+    <div class="fixed red clearfix" id="subs">
+        <div class="subs-left">
+            
+            <div class="subs-left-content">
+                <h2>DONEC NEC JUSTO EGET</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae fugiat blanditiis.</p>
+            </div>
+        </div>
+        <div class="subs-right">
+          <h2>Subscribe</h2>
+           <form action="">
+               <input type="text" placeholder="enter your email address!!">
+               <input type="submit" value="subscribe" class="btn black">
+           </form>
+        </div>
+        
+    </div>
+    <div class="fixed clearfix" id="contact">
+        <div class="contact-left">
+            <h2>DONEC NEC JUSTO EGET</h2>
+            <hr>
+            <div class="contact-left-box clearfix">
+                <div class="contact-left-box-icon circle black"></div>
+                <div class="contact-left-box-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="">more</a>
+                </div>
+            </div>
+            <hr>
+            <div class="contact-left-box clearfix">
+            <div class="contact-left-box-icon circle black"></div>
+            <div class="contact-left-box-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="">more</a>
+            </div>
+            </div>
+            <hr>
+            <div class="contact-left-box clearfix">
+            <div class="contact-left-box-icon circle black"></div>
+            <div class="contact-left-box-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="">more</a>
+            </div>
+            </div>
+        </div>
+        <div class="contact-center">
+            <h2>Contact</h2>
+            <div class="contact-center-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <form action="">
+                    <input type="text" placeholder="name">
+                    <input type="text" placeholder="email">
+                    <textarea  placeholder="your query">
+                    </textarea>
+                    <input type="submit" value="SEND" class="btn red">
+                    
+                </form>
+
+            </div>
+        </div>
+        <div class="contact-right">
+           <h2>INFO</h2>
+            <div class="contact-right-box clearfix">
+                <div class="contact-right-box-icon">
+                    <span class="fa fa-home fa-2x"></span>
+                </div>
+                <div class="contact-right-box-content">
+                   <h3>Address</h3>
+                    <p>Loremipsum </p>
+                    <p>Loremipsumdolt</p>
+                </div>
+            </div>
+            <hr>
+            <div class="contact-right-box clearfix">
+                <div class="contact-right-box-icon">
+                    <span class="fa fa-phone-square fa-2x"></span>
+                </div>
+                <div class="contact-right-box-content">
+                   <h3>Phone</h3>
+                    <p>0912345678</p>
+                    <p>012345689</p>
+                </div>
+            </div>
+            <hr>
+            <div class="contact-right-box clearfix">
+                <div class="contact-right-box-icon">
+                 <span class="fa fa-envelope fa-2x"></span>
+                </div>
+                <div class="contact-right-box-content">
+                   <h3>Email</h3>
+                    <p>asdf@gmail.com</p>
+                    <p>aqwd@gmail.com</p>
+                </div>
+            </div>
+            <hr>
+         
+        </div>
+
+
+    </div>
+    <footer class="full clearfix">
+        <div class="fixed">
+            <div class="copyright">
+                <div class="nav">
+                    <a href="">adsffwref</a>
+                    <a href="">adsffwref</a>
+                    <a href="">adsffwref</a>
+                    <a href="">adsffwref</a>
+                    <a href="">adsffwref</a>
+                    <a href="">adsffwref</a>
+                </div>
+                <div>LCC Design 2016@ Copyright</div>
+            </div>
+            <div class="sns">
+            <a href="">
+                <span class="fa fa-facebook fa-2x"></span>
+            </a>
+            <a href=""><span class="fa fa-twitter fa-2x"></span></a>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

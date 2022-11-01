@@ -1,0 +1,351 @@
+@media screen and (min-width:960px){
+body,p,h1,h2,h3,h4,h5,h6 {
+        
+        padding: 0px;
+        margin: 0px;
+    }
+    .full {
+        width:100%;
+    }
+    .fixed {
+        width:960px;
+        margin: auto;
+    }
+    
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+        
+    }
+    
+    body {
+        font-family: verdana;
+        font-size: 14px;
+    }
+    
+    h2 {
+        font-family: "oswald";
+        font-weight: 400;
+    }
+    
+    p {
+        line-height: 22px;
+    }
+    
+    a {
+        color: #f4f2f2;
+    }
+    nav {
+        height: 70px;
+        background-color: #333;
+        
+    }
+    
+    #logo {
+        width:100px;
+        height: 70px;
+        float: left;
+        background-color: aqua;
+    }
+    
+    #nav {
+        float: right
+    }
+    
+    #nav ul {
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    
+    #nav li {
+        list-style-type: none;
+        float: left;
+    }
+    
+    #nav a {
+        color:#eee;
+        display: block;
+        text-decoration: none;
+        font-family: helvatica;
+        font-size: 14px;
+        line-height: 70px;
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: all .2s;
+    }
+    
+    #nav a:hover {
+        background-color: antiquewhite
+    }
+    
+    header {
+        height: 560px;
+        background-image: url(wedpaper.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #news {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #e6e6e6
+    }
+    .news-box {
+        width: 320px;
+        float: left;
+    }
+    .news-box-icon {
+        
+        float: left;
+       
+        text-align: center;
+        line-height: 90px;
+        color: white;
+    }
+    .news-box-content {
+        float: left;
+        width: 230px;
+        margin-left: 10px;
+    }
+    .news-box-content h2 {
+        margin-bottom: 25px;
+    }
+    
+    #service {
+        padding-top: 75px;
+        padding-bottom: 75px;
+        }
+    
+    .service-content {
+        width: 640px;
+        float: left;
+    
+    }
+    
+    .service-img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background-image: url(wedpaper.jpg);
+        background-size: cover;
+        float: left;
+        margin-left: 40px;
+    }
+    
+    .slogan {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        line-height: 38px;
+        font-size: 1.4em;
+        color: #e54d3b;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .service-content-box {
+        float: left;
+        width: 280px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .service-content-box p {
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 8px 20px;
+        font-family: "Oswald";
+        text-decoration: none;
+        color: white;
+        border-radius: 80px;
+        display: inline-block;
+        cursor: pointer;
+         }
+    .red {
+        background-color: #e74d3c;
+    }
+    
+    .black {
+        background-color: #222;
+    }
+    
+    #subs {
+    padding-top: 50px;
+         padding-bottom: 50px;
+         border-radius: 10px;
+         color: #fff;
+}
+   #subs h2 {
+       margin-bottom: 20px
+           
+}
+           
+    .subs-left {
+        float: left;
+        width: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+      .subs-left-icon {
+        float: left;
+    }
+        
+    .subs-left-content {
+        float: left;
+        width: 360px;
+        padding-left: 15px;
+    }
+    
+    .subs-right {
+        float: left;
+        width: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .circle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+    
+    input {
+        border: 0
+    }
+    
+    textarea{
+        border: 0;
+        resize: none;
+    }
+    .subs-right input[type=text]{
+        padding-top: 11px;
+        padding-bottom: 8px;
+        border-radius: 30px;
+        width: 280px;
+        padding-left: 15px;
+        font-style: italic;
+    }
+    
+    #contact {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    #contact h2 {
+        margin-bottom: 30px;
+    }
+    
+    .contact-left {
+        float: left;
+        width: 300px;
+        padding: 0px 10px;
+    }
+    
+    .contact-left-box {
+        padding-top: 15PX;
+        padding-bottom: 15PX;
+    }
+    
+    .contact-left-box-icon {
+        float: left;
+    }
+    
+    .contact-left-box-content {
+        float: left;
+        width: 215px;
+        margin-left: 10px;
+    }
+    
+    hr {
+        border-bottom: 1px solid #ccc;
+        border-top: 0;
+    }
+    
+    .more {
+        color: #e74d3c;
+        text-decoration: none;
+    }
+    
+    .contact-center {
+        width: 300px;
+        float: left;
+        padding: 0px 10px;
+    }
+    
+    .contact-center-box {
+        background-color: #e7e7e7;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 20px;
+    }
+    
+    .contact-center-box input[type=text]{
+        width: 215px;
+        height: 40px;
+        border-radius: 50px;
+        padding-left: 15px;
+    }
+    
+    .contact-center-box textarea {
+        border-radius: 12px;
+        padding-left: 15px;
+        width: 215px;
+        height: 120px;
+    }
+    .contact-center-box input,.contact-center-box textarea,.contact-center-box p {
+        margin-bottom: 10px;
+    }
+    .contact-right {
+        float: left;
+        width: 300px;
+        padding: 0px 10px;
+    }
+    
+    .contact-right-box{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .contact-right-box-icon {
+        width: 60px;
+        float: left;
+        text-align: center;
+    }
+    .contact-right-box-content {
+        width: 60px;
+        float: left;
+        margin-left: 15px;
+    }
+    
+    footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #1f2727;
+        color: #fff;
+    }
+    
+    .copyright {
+        float: left;
+        width: 70%;
+        
+    }
+    
+    .sns {
+        float: right;
+        width: 30%;
+        text-align: right;
+    }
+    .sns a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #fff;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 50%;
+    }
+    .hamburger {
+        display: none;
+    }

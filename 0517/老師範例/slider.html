@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        #slider {
+            width: 600px;
+            height: 400px;
+        }
+        #slider .photo {
+            width: 600px;
+            height: 400px;
+            float: left;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var currentPosition = 0;
+            var photoWidth = 600;
+            var photo = $(".photo");
+            var numberOfPhotos = photo.length;
+            console.log(numberOfPhotos);
+            var speed = 600;
+            var timeout = 5000;
+            $("#wrapper").css("width",photoWidth * numberOfPhotos);
+            
+            function move(){
+                $("#wrapper").animate({
+                    "marginLeft":-(photoWidth*currentPosition)
+                },speed);
+            }
+            function cycle(){
+                if(currentPosition==numberOfPhotos-1){
+                    currentPosition=0;
+                }else{
+                    currentPosition++;
+                }
+                move();
+            }
+            setInterval(cycle,timeout);
+        })
+    </script>
+</head>
+<body>
+    <div id="slider">
+        <div id="wrapper">
+            <div class="photo">
+                <img src="http://lorempixel.com/image_output/cats-q-c-600-400-9.jpg" alt="">
+            </div>
+            <div class="photo">
+                <img src="http://lorempixel.com/image_output/cats-q-c-600-400-5.jpg" alt="">
+            </div>
+            <div class="photo">
+                <img src="http://lorempixel.com/image_output/cats-q-c-600-400-3.jpg" alt="">
+            </div>
+            <div class="photo">
+                <img src="http://lorempixel.com/image_output/cats-q-c-600-400-7.jpg" alt="">
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
